@@ -1,0 +1,26 @@
+--xYzZY
+    # Content-Disposition: form-data; name="x"
+    # 
+    # 1
+    # --xYzZY
+    # Content-Disposition: form-data; name="file with space"; filename="file.txt"
+    # Content-Type: text/plain; charset=us-ascii
+    # 
+    # 123
+    # 456
+    # --xYzZY
+    # Content-Type: text/json
+    # name: my-name
+    # filename: my-filename
+    # Any-Header: 123
+    # Content-Disposition: form-data; name="y"
+    # 
+    # {"count": 666}
+    # --xYzZY
+    # Any-Header: 567
+    # Content-Disposition: form-data; name="z"; filename="file.zip"
+    # Content-Type: application/gzip; charset=binary
+    # 
+    # +__^342���Z
+    # --xYzZY--
+    # '
