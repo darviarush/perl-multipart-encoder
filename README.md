@@ -34,9 +34,9 @@ Mime::Multipart - encoder for mime-type `multipart/form-data`
 
         $multipart->to($socket);
 
-# INSTALL
+# DESCRIPTION
 
-    $ cpm install -g git@github.com:darviarush/perl-multipart-encoder.git
+����������� � `multipart/form-data`.
 
 # LICENSE
 
