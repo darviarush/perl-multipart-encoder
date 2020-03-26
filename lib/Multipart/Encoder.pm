@@ -3,9 +3,10 @@ use 5.008001;
 use strict;
 use warnings;
 
-my $CRLF = "\r\n";
+our $VERSION = 0.0.1;
 
-#use Carp; $SIG{__DIE__} = sub { die Carp::confess @_ };
+
+my $CRLF = "\r\n";
 
 sub new {
 	my ($cls) = shift;
@@ -210,6 +211,6 @@ it under the same terms as Perl itself.
 
 =head1 AUTHOR
 
-Yaroslav O. Kosmina E<lt>kosmina.yaroslav@220-volt.ruE<gt>
+Yaroslav O. Kosmina E<lt>darviarush@mail.ruE<gt>
 
 =cut

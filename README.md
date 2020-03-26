@@ -1,14 +1,42 @@
 # NAME
 
-perl::mime::multipart - It's new $module
+Mime::Multipart - encoder for mime-type `multipart/form-data`
+
+# VERSION
+
+0.0.1
 
 # SYNOPSIS
 
-    use perl::mime::multipart;
+    use Multipart;
+
+        my $multipart = Multipart->new(
+                x=>1,
+                file_name => \"file.txt",
+                y=>[
+                        "Content-Type" => "text/json",
+                        name => 'my-name',
+                        filename => 'my-filename',
+                        _ => '{"count": 666}',
+                        'Any-Header' => 123,
+                ],
+                z => {
+                        _ => \'path/to/file.zip',
+                        'Any-Header' => 123,
+                }
+        )->buffer_size(2048)->boundary("xYzZY");
+
+        my $str = $multipart->as_string;
+
+        $multipart->to("path/to/file.form-data");
+
+        $multipart->to(\*STDOUT);
+
+        $multipart->to($socket);
 
 # DESCRIPTION
 
-perl::mime::multipart is ...
+����������� � `multipart/form-data`.
 
 # LICENSE
 
@@ -19,4 +47,4 @@ it under the same terms as Perl itself.
 
 # AUTHOR
 
-Yaroslav O. Kosmina <kosmina.yaroslav@220-volt.ru>
+Yaroslav O. Kosmina <darviarush@mail.ru>
