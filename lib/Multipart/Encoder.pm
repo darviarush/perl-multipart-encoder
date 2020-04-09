@@ -176,7 +176,7 @@ Multipart::Encoder - encoder for mime-type C<multipart/form-data>.
 
 =head1 VERSION
 
-v0.0.2
+v0.0.3
 
 =head1 SINOPSIS
 	
