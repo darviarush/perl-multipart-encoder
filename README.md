@@ -28,11 +28,10 @@ v0.0.2
 
 # SINOPSIS
 
-`@@/tmp/file.txt`
 
-```txt
-Simple text.
-
+```perl
+`echo "Simple text." > /tmp/file.txt`;
+$?	#  0
 `gzip < /tmp/file.txt > /tmp/file.gz`;
 $?	#  0
 
@@ -385,4 +384,4 @@ Yaroslav O. Kosmina <darviarush@mail.ru>
 
 ## Документация
 
-1. [NAME](mark/multipart-encoder.markdown)
+1. [NAME](.miu/mark/multipart-encoder.markdown)

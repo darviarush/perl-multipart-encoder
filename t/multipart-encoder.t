@@ -10,7 +10,7 @@ BEGIN {
 	close STDERR; open(STDERR, ">&STDOUT");
 }
 
-use Test::More tests => 32;
+use Test::More tests => 33;
 
 
 my ($_f, $_ret);
@@ -35,7 +35,8 @@ $buf
 print "= NAME" . "\n";
 print "= VERSION" . "\n";
 print "= SINOPSIS" . "\n";
-
+`echo "Simple text." > /tmp/file.txt`;
+::is( scalar($?), "0", "\$?	#  0" );
 `gzip < /tmp/file.txt > /tmp/file.gz`;
 ::is( scalar($?), "0", "\$?	#  0" );
 
