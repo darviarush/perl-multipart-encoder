@@ -2,6 +2,10 @@ Revision history for Perl extension Multipart-Encoder
 
 {{$NEXT}}
 
+v0.0.5 2020-04-09T16:21:43Z
+
+    - fix pod
+
 v0.0.4 2020-04-09T14:33:30Z
 
     - release to cpan

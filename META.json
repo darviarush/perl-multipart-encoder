@@ -1,7 +1,7 @@
 {
    "abstract" : "encoder for mime-type C<multipart/form-data>.",
    "author" : [
-      "Yaroslav O. Kosmina L<mailto:darviarush@mail.ru>"
+      "Yaroslav O. Kosmina L<mailto:dart@cpan.org>"
    ],
    "dynamic_config" : 0,
    "generated_by" : "Minilla/v3.1.9, CPAN::Meta::Converter version 2.150010",
@@ -64,7 +64,7 @@
          "web" : "https://github.com/darviarush/perl-multipart-encoder"
       }
    },
-   "version" : "v0.0.4",
+   "version" : "v0.0.5",
    "x_authority" : "cpan:DART",
    "x_contributors" : [
       "Iaroslav O. Kosmina <darviarush@ya.ru>",
