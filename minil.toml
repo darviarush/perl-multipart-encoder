@@ -2,4 +2,4 @@ name = "Multipart-Encoder"
 module_maker="ModuleBuildTiny"
 
 [release]
-do_not_upload_to_cpan=true
+do_not_upload_to_cpan=false
