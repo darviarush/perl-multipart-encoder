@@ -14,7 +14,6 @@ use Test::More tests => 30;
 
 my $_f;
 print "= NAME" . "\n";
-print "= VERSION" . "\n";
 print "= SINOPSIS" . "\n";
 # Make datafiles for test:
 `echo "Simple text." > /tmp/file.txt`;

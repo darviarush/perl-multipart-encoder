@@ -3,10 +3,6 @@
 
 Multipart::Encoder - encoder for mime-type `multipart/form-data`.
 
-# VERSION
-
-v0.0.3
-
 # SINOPSIS
 
         # Make datafiles for test:

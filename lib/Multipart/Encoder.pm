@@ -3,7 +3,7 @@ use 5.008001;
 use strict;
 use warnings;
 
-our $VERSION = v0.0.5;
+our $VERSION = v0.0.6;
 
 my $CRLF = "\r\n";
 
@@ -173,10 +173,6 @@ __END__
 =head1 NAME
 
 Multipart::Encoder - encoder for mime-type C<multipart/form-data>.
-
-=head1 VERSION
-
-v0.0.3
 
 =head1 SINOPSIS
 	
