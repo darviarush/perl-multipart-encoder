@@ -66,9 +66,9 @@ The only module C[HTTP::Body::Builder::MultiPart](https://metacpan.org/pod/HTTP%
 
 Constructor.
 
-        my $multipart = Multipart::Encoder->new;
-        my $multipart2 = $multipart->new;
-        $multipart2     ##!= $multipart
+        my $multipart1 = Multipart::Encoder->new;
+        my $multipart2 = $multipart1->new;
+        $multipart2     ##!= $multipart1
         
         ref Multipart::Encoder::new(0)  # 0
         
@@ -273,8 +273,8 @@ Raise if not open file.
 
 # SEE ALSO
 
-- \[HTTP::Tiny::Multipart\]
-- \[HTTP::Body::Builder::MultiPart\]
+- CL[HTTP::Tiny::Multipart](https://metacpan.org/pod/HTTP%3A%3ATiny%3A%3AMultipart)
+- CL[HTTP::Body::Builder::MultiPart](https://metacpan.org/pod/HTTP%3A%3ABody%3A%3ABuilder%3A%3AMultiPart)
 
 # LICENSE
 

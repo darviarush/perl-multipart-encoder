@@ -50,18 +50,20 @@ sub as_string {
 
 sub to {
     my ( $self, $to ) = @_;
+	
+	my $is_handle = UNIVERSAL::can( $to, "write" ) || ref $to ne "";
 
-    my $f;
-    if ( UNIVERSAL::can( $to, "write" ) ) {
-        $f = $to;
+    my $foo;
+    if ( $is_handle ) {
+        $foo = $to;
     }
     else {
-        open $f, ">", $to or die "Not open file `$to`. $!";
+        open $foo, ">", $to or die "Not open file `$to`. $!";
     }
 
-    $self->_gen(sub { $f->write($_) for @_ });
+    $self->_gen(sub { $foo->write( $_ ) for @_ });
 
-    close $f if !UNIVERSAL::can( $to, "write" );
+    close $foo if !$is_handle;
 
     $self;
 }
@@ -234,9 +236,9 @@ C<$ cpm install -g Multipart::Encoder>
 
 Constructor.
 	
-	my $multipart = Multipart::Encoder->new;
-	my $multipart2 = $multipart->new;
-	$multipart2	##!= $multipart
+	my $multipart1 = Multipart::Encoder->new;
+	my $multipart2 = $multipart1->new;
+	$multipart2	##!= $multipart1
 	
 	ref Multipart::Encoder::new(0)	# 0
 	B<Return> new object.
@@ -395,9 +397,9 @@ Header B<Content-Disposition> added automically.
 
 =over
 
-=item * [HTTP::Tiny::Multipart]
+=item * CLL<HTTP::Tiny::Multipart>
 
-=item * [HTTP::Body::Builder::MultiPart]
+=item * CLL<HTTP::Body::Builder::MultiPart>
 
 =back
 

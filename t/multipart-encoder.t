@@ -12,26 +12,7 @@ BEGIN {
 
 use Test::More tests => 33;
 
-
-my ($_f, $_ret);
-
-sub ___std {
-my $fh = shift;
-open $_f, ">&", $fh; close $fh; open $fh, ">", ".miu/miu-tmp-fh";
-}
-
-sub ___res {
-my $fh = shift;
-close $fh;
-open $fh, ">&", $_f;
-}
-
-sub ___get {
-open my $f, ".miu/miu-tmp-fh";
-read $f, my $buf, -s $f;
-close $f;
-$buf
-}
+my $_f;
 print "= NAME" . "\n";
 print "= VERSION" . "\n";
 print "= SINOPSIS" . "\n";
@@ -72,15 +53,15 @@ open my $f, "<", "/tmp/file.form-data"; binmode $f; read $f, my $buf, -s $f; clo
 
 ::is_deeply( scalar($buf), scalar($str), "\$buf						## \$str" );
 
-::___std(\*STDOUT); $multipart->to(\*STDOUT); ::___res(\*STDOUT); ::is_deeply( scalar(::___get()), scalar($str), "\$multipart->to(\\*STDOUT);	##>> \$str" );
+{ local *STDOUT; open STDOUT, '>', \$_f; binmode STDOUT; $multipart->to(\*STDOUT); close STDOUT }; ::is_deeply( scalar($_f), scalar($str), "\$multipart->to(\\*STDOUT);	##>> \$str" );
 
 print "= DESCRIPTION" . "\n";
 print "= INSTALL" . "\n";
 print "= SUBROUTINES/METHODS" . "\n";
 print "== new" . "\n";
-my $multipart = Multipart::Encoder->new;
-my $multipart2 = $multipart->new;
-::cmp_ok( scalar($multipart2), '!=', scalar($multipart), "\$multipart2	##!= \$multipart" );
+my $multipart1 = Multipart::Encoder->new;
+my $multipart2 = $multipart1->new;
+::cmp_ok( scalar($multipart2), '!=', scalar($multipart1), "\$multipart2	##!= \$multipart1" );
 
 ::is( scalar(ref Multipart::Encoder::new(0)), "0", "ref Multipart::Encoder::new(0)	# 0" );
 

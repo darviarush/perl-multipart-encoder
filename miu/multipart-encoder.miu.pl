@@ -8,8 +8,6 @@ v0.0.2
 
 = SINOPSIS
 
-	mkdir "/tmp";
-
 	`echo "Simple text." > /tmp/file.txt`;
 	$?	#  0
 	`gzip < /tmp/file.txt > /tmp/file.gz`;
@@ -67,9 +65,9 @@ The only module `HTTP::Body::Builder::MultiPart` does not allow adding a file as
 
 Constructor.
 
-	my $multipart = Multipart::Encoder->new;
-	my $multipart2 = $multipart->new;
-	$multipart2	##!= $multipart
+	my $multipart1 = Multipart::Encoder->new;
+	my $multipart2 = $multipart1->new;
+	$multipart2	##!= $multipart1
 	
 	ref Multipart::Encoder::new(0)	# 0
 	
@@ -250,8 +248,8 @@ Raise if not open file.
 
 = SEE ALSO
 
-* [HTTP::Tiny::Multipart]
-* [HTTP::Body::Builder::MultiPart]
+* `HTTP::Tiny::Multipart`
+* `HTTP::Body::Builder::MultiPart`
 
 = LICENSE
 
