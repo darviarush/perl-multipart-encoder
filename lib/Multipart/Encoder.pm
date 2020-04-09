@@ -3,7 +3,7 @@ use 5.008001;
 use strict;
 use warnings;
 
-our $VERSION = v0.0.3;
+our $VERSION = v0.0.4;
 
 my $CRLF = "\r\n";
 

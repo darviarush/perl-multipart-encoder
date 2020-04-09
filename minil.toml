@@ -1,5 +1,5 @@
 name = "Multipart-Encoder"
 module_maker="ModuleBuildTiny"
-
-[release]
-do_not_upload_to_cpan=false
+authority = "cpan:DART"
+abstract_from="lib/Multipart/Encoder.pm"
+badges = ['travis-ci.org', 'metacpan']

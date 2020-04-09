@@ -64,7 +64,8 @@
          "web" : "https://github.com/darviarush/perl-multipart-encoder"
       }
    },
-   "version" : "v0.0.3",
+   "version" : "v0.0.4",
+   "x_authority" : "cpan:DART",
    "x_contributors" : [
       "Iaroslav O. Kosmina <darviarush@ya.ru>",
       "Yaroslav O. Kosmina <darviarush@mail.ru>",
