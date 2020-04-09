@@ -8,6 +8,8 @@ v0.0.2
 
 = SINOPSIS
 
+	mkdir "/tmp";
+
 	`echo "Simple text." > /tmp/file.txt`;
 	$?	#  0
 	`gzip < /tmp/file.txt > /tmp/file.gz`;
