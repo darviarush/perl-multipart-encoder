@@ -43,11 +43,11 @@ Multipart::Encoder - encoder for mime-type `multipart/form-data`.
 
 # DESCRIPTION
 
-The encoder in 'multipart/form-data' is not represented in perl libraries. It is only used as part of other libraries, for example, `HTTP::Tiny::Multipart`.
+The encoder in 'multipart/form-data' is not represented in perl libraries. It is only used as part of other libraries, for example, C[HTTP::Tiny::Multipart](https://metacpan.org/pod/HTTP%3A%3ATiny%3A%3AMultipart).
 
 But there is no such library for `AnyEvent::HTTP`.
 
-The only module `HTTP::Body::Builder::MultiPart` does not allow adding a file as a string to a **multipart**.
+The only module C[HTTP::Body::Builder::MultiPart](https://metacpan.org/pod/HTTP%3A%3ABody%3A%3ABuilder%3A%3AMultiPart) does not allow adding a file as a string to a **multipart**.
 
 # INSTALL
 
@@ -266,8 +266,8 @@ Raise if not open file.
 
 # SEE ALSO
 
-- `HTTP::Tiny::Multipart`
-- `HTTP::Body::Builder::MultiPart`
+- C[HTTP::Tiny::Multipart](https://metacpan.org/pod/HTTP%3A%3ATiny%3A%3AMultipart)
+- C[HTTP::Body::Builder::MultiPart](https://metacpan.org/pod/HTTP%3A%3ABody%3A%3ABuilder%3A%3AMultiPart)
 
 # LICENSE
 

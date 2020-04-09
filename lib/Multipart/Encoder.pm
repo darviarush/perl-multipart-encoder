@@ -3,7 +3,7 @@ use 5.008001;
 use strict;
 use warnings;
 
-our $VERSION = v0.0.6;
+our $VERSION = v0.0.7;
 
 my $CRLF = "\r\n";
 
@@ -51,7 +51,7 @@ sub as_string {
 sub to {
     my ( $self, $to ) = @_;
 	
-	my $is_handle = UNIVERSAL::can( $to, "write" ) || ref $to ne "";
+	my $is_handle = ref $to ne "";
 
     my $foo;
     if ( $is_handle ) {
@@ -212,11 +212,11 @@ Multipart::Encoder - encoder for mime-type C<multipart/form-data>.
 	$multipart->to(\*STDOUT);      ##>> $str
 	=head1 DESCRIPTION
 
-The encoder in 'multipart/form-data' is not represented in perl libraries. It is only used as part of other libraries, for example, C<HTTP::Tiny::Multipart>.
+The encoder in 'multipart/form-data' is not represented in perl libraries. It is only used as part of other libraries, for example, CL<HTTP::Tiny::Multipart>.
 
 But there is no such library for C<AnyEvent::HTTP>.
 
-The only module C<HTTP::Body::Builder::MultiPart> does not allow adding a file as a string to a B<multipart>.
+The only module CL<HTTP::Body::Builder::MultiPart> does not allow adding a file as a string to a B<multipart>.
 
 =head1 INSTALL
 
@@ -389,9 +389,9 @@ Header B<Content-Disposition> added automically.
 
 =over
 
-=item * C<HTTP::Tiny::Multipart>
+=item * CL<HTTP::Tiny::Multipart>
 
-=item * C<HTTP::Body::Builder::MultiPart>
+=item * CL<HTTP::Body::Builder::MultiPart>
 
 =back
 
